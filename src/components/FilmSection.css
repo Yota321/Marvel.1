@@ -1,0 +1,81 @@
+.films-section {
+  background-color: var(--charcoal-black);
+  padding: 6rem 0;
+}
+
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.film-card {
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.film-card:hover {
+  transform: translateY(-10px);
+}
+
+.film-poster {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.film-card:hover .poster-image {
+  transform: scale(1.05);
+}
+
+.film-info {
+  padding: 0.5rem 0;
+}
+
+.film-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--mist-white);
+}
+
+.film-tagline {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--vintage-beige);
+}
+
+.film-director {
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--grimy-brown-grey);
+}
+
+@media (max-width: 768px) {
+  .films-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .films-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
